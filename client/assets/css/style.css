@@ -1,0 +1,38 @@
+/* 
+    Put hex color codes here for reference
+    Pale Purple Pantone: #F6DEF6
+    Purple-toned Dark Grey: #685A68
+    Purple-toned light grey: #B6A7B6
+    contrast seafoam: #C2EEEA
+    contrast dark seafoam: #8CB6B3
+*/
+.contacticon {
+    font-size: 30px;
+    color: black;
+}
+
+#locate {
+    font-size: 16px;
+}
+
+nav {
+    background: linear-gradient(to right, #FFCED9, #B5AEEC);
+}
+
+#resumeBtn {
+    color: grey;
+    background-color: #FFCED9;
+    border: 0;
+    border-radius: 6px;
+}
+
+#resumeBtn:hover {
+    color: #FFCED9;
+    background-color: grey;
+}
+
+#profile {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
