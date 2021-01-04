@@ -6,7 +6,7 @@ const Homepage = () => {
       <div className="container">
         <div className="row" style={{margin: "2rem"}}>
           <div className="col-md-4">
-            <img id="profile" src="./assets/images/profile.jpg" alt="artsy pic of me through upside-down chair" />
+            <img id="profile" src="/assets/images/profile.jpg" alt="artsy pic of me through upside-down chair" />
           </div>
           <div className="col">
             <h3>Kay Murray ✌️</h3>

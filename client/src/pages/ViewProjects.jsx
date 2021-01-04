@@ -18,7 +18,7 @@ const ViewProjects = () => {
 
           {/* project 2 */}
           <div className="card col-12 col-sm-6 col-md-4" style={{width: "18rem", padding: "6px", border: "none"}}>
-            <img src="./assets/images/among-us.png" className="card-img-top" alt="selection page from Smartest Among Us app" />
+            <img src="/assets/images/among-us.png" className="card-img-top" alt="selection page from Smartest Among Us app" />
             <div className="card-body">
               <h5 className="card-title">Smartest Among Us</h5>
               <p className="card-text">Among Us themed quiz app</p>
@@ -42,7 +42,7 @@ const ViewProjects = () => {
         <div className="row">
           {/* code quiz  */}
           <div className="card col-12 col-sm-6 col-md-4 col-lg-3" style={{width: "18rem", padding: "6px", border: "none"}}>
-            <img src="./assets/images/js-quiz.gif" className="card-img-top" alt="project pic" />
+            <img src="/assets/images/js-quiz.gif" className="card-img-top" alt="project pic" />
             <div className="card-body">
               <h5 className="card-title">code quiz</h5>
               <p className="card-text">take a coding quiz! See high scores! (from local storage)</p>
@@ -53,7 +53,7 @@ const ViewProjects = () => {
 
           {/* day planner  */}
           <div className="card col-12 col-sm-6 col-md-4 col-lg-3" style={{width: "18rem", padding: "6px", border: "none"}}>
-            <img src="./assets/images/schedule-page.gif" className="card-img-top" alt="project pic" />
+            <img src="/assets/images/schedule-page.gif" className="card-img-top" alt="project pic" />
             <div className="card-body">
               <h5 className="card-title">day planner</h5>
               <p className="card-text">app that saves day planner to local storage</p>
@@ -64,7 +64,7 @@ const ViewProjects = () => {
 
           {/* weather dashboard */}
           <div className="card col-12 col-sm-6 col-md-4 col-lg-3" style={{width: "18rem", padding: "6px", border: "none"}}>
-            <img src="./assets/images/weather-dash.gif" className="card-img-top" alt="project pic" />
+            <img src="/assets/images/weather-dash.gif" className="card-img-top" alt="project pic" />
             <div className="card-body">
               <h5 className="card-title">weather dashboard</h5>
               <p className="card-text">search cities for current weather and 5-day forecast</p>
