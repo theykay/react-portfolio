@@ -1,25 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const submitRequest = async (e) => {
+    e.preventDefault();
+    console.log({ name, email, message });
+    const response = await fetch("/access", {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, message })
+    });
+    const resData = await response.json();
+    if (resData.status === "success") {
+      alert("message sent");
+      this.resetForm();
+    } else if (resData.status === "fail") {
+      alert("message failed to send");
+    }
+  };
+
   return (
     <>
       {/* email form */}
       <div class="card"
         style={{ width: "75%", marginLeft: "12.5%", marginRight: "12.5%", marginTop: "2rem", marginBottom: "2rem", padding: "2rem", justifyContent: "center" }}>
         <h2>contact</h2>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Name</label>
-          <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="name" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="message"></textarea>
-        </div>
-        <button type="button" class="btn btn-outline-success" style={{width: "25%"}}>submit</button>
+        <form
+          method="POST"
+          action="send"
+          onSubmit={submitRequest}
+        >
+          <div class="form-group">
+            <label for="formName">Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="formName"
+              placeholder="name"
+              onChange={e => setName(e.target.value)}
+              value={name}
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="formEmail"
+              htmlFor="email"
+            >Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="formEmail" placeholder="name@example.com"
+              onChange={e => setEmail(e.target.value)}
+              value={email}
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Message</label>
+            <textarea
+              class="form-control"
+              id="formMessage"
+              rows="3"
+              placeholder="message"
+              onChange={e => setMessage(e.target.value)}
+              value={message}
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-outline-success" style={{ width: "25%" }}>submit</button>
+        </form>
       </div>
 
       {/* links to relevant accounts */}
